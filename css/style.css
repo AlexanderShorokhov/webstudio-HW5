@@ -3,7 +3,8 @@
   --text-color: #212121;
   --paragraph-color: #757575;
   --border-card: 1px solid #eee;
-  --master-hover-focus: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --master-hover-focus: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --time-hover: 250ms;
 }
 
 body {
@@ -38,12 +39,12 @@ ul {
 header ul a:hover{
   color: var(--master-color);
   cursor: poiter;
-  transition: var(--master-hover-focus);
+  transition-delay: var(--master-hover-focus);
 }
 
 header ul a:focus{
   color: var(--master-color);
-  transition: var(--master-hover-focus);
+  transition-delay: var(--master-hover-focus);
 }
 
 img{
@@ -174,17 +175,17 @@ footer {
   padding-bottom: 32px;
   color: var(--paragraph-color);
   align-items: center;
-  transition: var(--master-hover-focus);
+  transition: var(--time-hover) color;
 }
 
 .contact-link:hover{
   color: var(--master-color);
-  transition: var(--master-hover-focus);
+  transition-delay: var(--master-hover-focus);
 }
 
 .contact-link:focus{
   color: var(--master-color);
-  transition: var(--master-hover-focus);
+  transition-delay: var(--master-hover-focus);
 }
 
 .contact-svg{
@@ -230,17 +231,17 @@ footer {
   color: #fff;
   margin-right: auto;
   margin-left: auto;
-  transition: var(--master-hover-focus);
+  transition: var(--time-hover) background-color;
 }
 
 .effective-solutions-button:hover{
   background-color: #188CE8;
-  transition: var(--master-hover-focus);
+  transition-delay: var(--master-hover-focus);
 }
 
 .effective-solutions-button:focus{
   background-color: #188CE8;
-  transition: var(--master-hover-focus);
+  transition-delay: var(--master-hover-focus);
 }
 
 /* Список преимуществ */
@@ -443,19 +444,19 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: var(--master-hover-focus);
+  transition: var(--time-hover) background-color, color;
 } 
 
 .team-social-link:hover{
   color: #fff;
-  background-color:var(--master-color);
-  transition: var(--master-hover-focus);
+  background-color: var(--master-color);
+  transition-duration: var(--master-hover-focus);
 }
 
 .team-social-link:focus{
   color: #fff;
   background-color:var(--master-color);
-  transition: var(--master-hover-focus);
+  transition-duration: var(--master-hover-focus);
 }
 
 .team-social-icon{
@@ -503,19 +504,19 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: var(--master-hover-focus);
+  transition: var(--time-hover) border-color, color;
 }
 
 .clients-link:hover{
   border-color: var(--master-color);
   color: var(--master-color);
-  transition: var(--master-hover-focus);
+  transition-delay: var(--master-hover-focus);
 }
 
 .clients-link:focus{
   border-color: var(--master-color);
   color: var(--master-color);
-  transition: var(--master-hover-focus);
+  transition-delay: var(--master-hover-focus);
 }
 
 /* клиенты SVG иконки */
@@ -608,18 +609,18 @@ footer {
   background-position: center;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: var(--master-hover-focus);
+  transition: var(--time-hover) background-color;
 }
 
 .footer-social-link:hover{
   background-color: var(--master-color);
-  transition: var(--master-hover-focus);
+  transition-duration: var(--master-hover-focus);
   
 }
 
 .footer-social-link:focus{
   background-color: var(--master-color);
-  transition: var(--master-hover-focus);
+  transition-duration: var(--master-hover-focus);
 }
 
 .footer-social-icon{
@@ -656,7 +657,7 @@ footer {
   border-radius: 4px;
   background-color: #F5F4FA;
   padding: 6px 22px;
-  transition: var(--master-hover-focus);
+  transition: var(--time-hover) background-color, color, box-shadow;
 }
 
 .filter-item:last-child{
@@ -667,14 +668,14 @@ footer {
   background-color: var(--master-color);
   color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: var(--master-hover-focus);
+  transition-delay: var(--master-hover-focus);
 }
 
 .filter-button:focus{
   background-color: var(--master-color);
   color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: var(--master-hover-focus);
+  transition-delay: var(--master-hover-focus);
 }
 
 /* Проекты */
@@ -694,7 +695,7 @@ footer {
 .project-card{
   margin-right: 30px;
   margin-bottom: 30px;
-  transition: var(--master-hover-focus);
+  transition: var(--time-hover) box-shadow;
 }
 
 .project-card:nth-child(3n){
@@ -707,12 +708,12 @@ footer {
 
 .project-card:hover{
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: var(--master-hover-focus);
+  transition-delay: var(--master-hover-focus);
 }
 
 .project-card:focus{
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: var(--master-hover-focus);
+  transition-delay: var(--master-hover-focus);
 }
 
 /* .project-card:hover */
@@ -736,12 +737,12 @@ footer {
   color: #FFFFFF;
   background-color: rgba(33, 150, 243, 0.9);
   padding: 63px 24px;
-  transition: var(--master-hover-focus);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-card:hover .project-overlay-text{
   transform: translateY(-100%);
-  transition: var(--master-hover-focus);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-heading{
@@ -797,10 +798,16 @@ footer {
 
 .modal-close{
   position: absolute;
+  display: flex;
   width: 30px;
   height: 30px;
   top: 8px;
   right: 8px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-close{
+  justify-content: center;
+  align-items: center;
 }
